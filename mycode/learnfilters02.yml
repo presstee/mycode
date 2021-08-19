@@ -1,0 +1,8 @@
+---
+- name: Jinja2 default filters
+  hosts: localhost
+  gather_facts: False
+
+  tasks:
+{{ ['a','b','c'] | shuffle(seed=inventory_hostname) }}
+# => ['b','a','c']
